@@ -1,0 +1,13 @@
+[
+  {
+    "role": "Junior React Developer",
+    "organisation": "InfoPolus",
+    "startDate": "May, 2022",
+    "endDate": "November, 2022",
+    "experiences": [
+      "experience in developing web applications,using TypeScript and the React library,",
+      "Development of React components using Redux,Layout on React and TypeScript"
+    ],
+    "imageSrc": "history/infopolus.png"
+  }
+]

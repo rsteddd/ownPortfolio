@@ -1,0 +1,10 @@
+[
+    {
+      "title": "Crypto-Portfolio",
+      "imageSrc": "projects/project.png",
+      "description": "This is a project made to learn the latest languages by building an app.",
+      "skills": ["React","Ant-design", "Express", "Node"],
+      "demo": "https://www.example.com",
+      "source": "https://github.com/rsteddd/react-crypto-portfolio.git"
+    }
+]
