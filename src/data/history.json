@@ -9,5 +9,16 @@
       "Development of React components using Redux,Layout on React and TypeScript"
     ],
     "imageSrc": "history/infopolus.png"
-  }
+  },
+  {
+  "role": "Junior React Developer",
+  "organisation": "Your Price Booking",
+  "startDate": "April, 2024",
+  "endDate": "June, 2024",
+  "experiences": [
+    "experience in developing web applications,",
+    "using Next.js"
+  ],
+  "imageSrc": "history/booking.jpeg"
+}
 ]
