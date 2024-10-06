@@ -20,5 +20,16 @@
     "using Next.js"
   ],
   "imageSrc": "history/booking.jpeg"
-}
+},
+  {
+    "role": "Junior React Developer ",
+    "organisation": "Stagic.dk",
+    "startDate": "April, 2024",
+    "endDate": "November, 2024",
+    "experiences": [
+      "experience in developing web applications,",
+      "using Next.js"
+    ],
+    "imageSrc": "history/stagic.jpeg"
+  }
 ]
