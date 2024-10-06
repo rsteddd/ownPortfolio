@@ -1,16 +1,17 @@
 @import "../../vars.css";
 
-
 .container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 50px;
+    margin: 50px 5%; /* Адаптовано відступи */
     z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-family: 'Comic Sans MS', sans-serif; /* Додано шрифт манги */
+    font-family: 'Poppins', sans-serif; /* Більш сучасний шрифт */
+    background-color: #f4f4f9; /* Додав фону для контрасту */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Легка тінь */
 }
 
 .content {
@@ -19,29 +20,28 @@
     align-items: flex-start;
     color: var(--color-text);
     z-index: 1;
+    max-width: 50%; /* Обмежує ширину текстового блоку */
 }
 
 .title {
-    font-size: 72px;
+    font-size: 3.5rem; /* Зменшено розмір для кращої адаптивності */
     font-weight: 900;
-    margin-bottom: 35px;
-    font-family: 'Comic Sans MS', sans-serif; /* Додано шрифт манги */
-    background: linear-gradient(90deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 0) 120%
-    );
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgb(117, 116, 116) 70%, rgba(147, 143, 143, 0) 120%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .description {
-    font-size: 30px;
-    margin-bottom: 52px;
-    font-family: 'Comic Sans MS', sans-serif; /* Додано шрифт манги */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 450px; /* Контроль ширини тексту */
 }
 
 .heroImg {
-    width: 40%;
+    width: 30%; /* Зменшено розмір зображення для збалансування контенту */
+    height: auto;
     z-index: 1;
     animation-name: floating;
     animation-duration: 3s;
@@ -61,28 +61,75 @@
     }
 }
 
-.bottomBlur {
+.topBlur, .bottomBlur {
     position: absolute;
-    width: 50vw;
-    height: 50vw;
-    min-width: 350px;
-    min-height: 350px;
-    top: -128px;
-    left: 10vw;
-    border: 764px;
+    border-radius: 50%;
     filter: blur(100px);
     z-index: 0;
+    background: rgba(117, 127, 161, 0.2); /* Легкий синій ефект */
+}
+
+.bottomBlur {
+    width: 45vw;
+    height: 45vw;
+    min-width: 300px;
+    min-height: 300px;
+    bottom: -50px;
+    right: 10vw;
 }
 
 .topBlur {
-
+    width: 35vw;
+    height: 35vw;
+    min-width: 250px;
+    min-height: 250px;
+    top: -100px;
+    left: 5vw;
 }
 
-@media screen and (min-width: 830px) {
+/* Адаптивність для мобільних пристроїв */
+@media screen and (max-width: 830px) {
     .container {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        padding: 20px;
     }
+
     .content {
         align-items: center;
+        text-align: center;
+        max-width: 100%; /* Повна ширина для мобільних */
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .heroImg {
+        width: 50%; /* Збільшено зображення на мобільних */
+        margin-top: 20px;
+    }
+
+    .topBlur, .bottomBlur {
+        display: none; /* Вимкнено розмиті елементи для мобільних */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        margin-left: 8%;
+        margin-right: 8%;
+        padding: 60px;
+    }
+
+    .heroImg {
+        width: 35%;
+    }
+
+    .content {
+        max-width: 45%; /* Збільшено ширину контенту для великих екранів */
     }
 }

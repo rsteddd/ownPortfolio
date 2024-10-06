@@ -2,76 +2,103 @@
 
 .container {
     position: relative;
-    background-color: #D3D3D3;
+    background-color: #f0f0f0; /* М'який фон */
     border-radius: 15px;
-    box-shadow: 0 0 0 2px #000000;
-    padding: 73px;
-    margin-top: 110px;
-    z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-family: 'Comic Sans MS', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Більш м'яка тінь */
+    padding: 50px; /* Менший padding для кращої адаптивності */
+    margin: 50px 5%; /* Адаптивні відступи з боків */
+    font-family: 'Poppins', sans-serif; /* Більш сучасний шрифт */
+    transition: background-color 0.3s ease-in-out;
 }
+
+.container:hover {
+    background-color: #e0e0e0; /* Легка зміна кольору при ховері */
+}
+
 .title {
     color: var(--color-text);
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.75px;
     text-transform: uppercase;
-    font-family: 'Comic Sans MS', sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
 }
+
 .content {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
+
 .aboutImage {
-    width: 30%;
-    margin-top: 3%;
+    flex: 1;
+    max-width: 25%; /* Зменшено максимальну ширину зображення */
+    height: auto; /* Пропорційно зменшується висота */
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Плавна анімація при ховері */
 }
+
+.aboutImage:hover {
+    transform: scale(1.05); /* Легке збільшення при ховері */
+}
+
 .aboutItems {
-    color: var(--color-text);
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 }
+
 .aboutItem {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 20px;
-    list-style: none;
-    padding: 25px;
-    margin-left: 10%;
-    background-image: linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.42) 0%,
-            rgba(0, 0, 0, 0.42) 0%
-    );
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: 0.4s;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .aboutItem:hover {
-    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-.aboutItem h3 {
-    font-size: 25px;
+
+.aboutItem img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.aboutItemText h3 {
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: var(--color-text);
 }
 
-.aboutItem p {
-    font-size: 25px;
-    margin: 0;
-    font-family: 'Comic Sans MS', sans-serif;
+.aboutItemText p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
 }
 
+/* Адаптивність */
 @media screen and (max-width: 830px) {
     .container {
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: none;
         background-color: transparent;
-        padding-left: 0;
-        padding-right: 0;
+    }
+
+    .title {
+        font-size: 1.8rem;
     }
 
     .content {
@@ -79,15 +106,33 @@
     }
 
     .aboutImage {
-        display: none;
+        max-width: 80%; /* Менше зображення на мобільних */
+        margin-bottom: 20px; /* Додано відступ знизу */
     }
 
     .aboutItems {
-        margin-top: 29px;
+        margin-top: 20px;
     }
 
     .aboutItem {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: none;
+    }
+
+    .aboutItem img {
+        margin-bottom: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .aboutItemText h3 {
+        font-size: 1.2rem;
+    }
+
+    .aboutItemText p {
+        font-size: 0.9rem;
     }
 }

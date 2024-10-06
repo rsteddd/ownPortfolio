@@ -1,81 +1,18 @@
-/*@import "../../vars.css";*/
-
-/*.container{*/
-/*    color: var(--color-text);*/
-/*    margin-top: 120px;*/
-/*    background-color: var(--color-secondary);*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-evenly;*/
-/*    width: 100vw;*/
-/*    padding: 55px 10%;*/
-/*    gap: 10px;*/
-/*}*/
-/*.text h2 {*/
-/*    font-size: 80px;*/
-/*    font-weight: 700;*/
-/*    letter-spacing: 4px;*/
-/*}*/
-/*.text p {*/
-/*    font-size: 40px;*/
-/*    font-weight: 400;*/
-/*    letter-spacing: 2px;*/
-/*}*/
-/*.links {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: flex-start;*/
-/*    list-style: none;*/
-/*    gap: 26px;*/
-/*}*/
-/*.link {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    gap: 25px;*/
-/*}*/
-
-/*.link a {*/
-/*    color: var(--color-text);*/
-/*    text-decoration: none;*/
-/*    font-size: 30px;*/
-/*    font-weight: 400;*/
-/*    letter-spacing: 1.5px;*/
-/*}*/
-
-/*@media screen and (max-width: 830px) {*/
-/*    .container {*/
-/*        flex-direction: column;*/
-/*        gap: 23px;*/
-/*    }*/
-
-/*    .text {*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        align-items: center;*/
-/*    }*/
-
-/*    .links {*/
-/*        align-items: center;*/
-/*    }*/
-/*}*/
-
-@import "../../vars.css";
-
 .container {
     color: var(--color-text);
     margin-top: 120px;
-    background-color: #333333; /* Чорний колір фону */
+    background-color: #333333; /* Темний фон */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100vw;
-    padding: 55px 10%;
-    gap: 10px;
+    padding: 50px 10%;
+    gap: 40px;
     font-family: 'Comic Sans MS', sans-serif; /* Застосування шрифту 'Comic Sans MS' */
 }
 
 .text h2 {
-    font-size: 80px;
+    font-size: 72px;
     font-weight: 700;
     letter-spacing: 4px;
     color: #FFFFFF; /* Білий колір тексту */
@@ -83,7 +20,7 @@
 }
 
 .text p {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 400;
     letter-spacing: 2px;
     color: #FFFFFF; /* Білий колір тексту */
@@ -95,36 +32,66 @@
     flex-direction: column;
     align-items: flex-start;
     list-style: none;
-    gap: 26px;
+    gap: 20px;
 }
 
 .link {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
+}
+
+.link img {
+    width: 35px;
+    height: 35px;
 }
 
 .link a {
     color: #FFFFFF; /* Білий колір тексту */
     text-decoration: none;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 400;
     letter-spacing: 1.5px;
+    transition: color 0.3s ease;
 }
+
+.link a:hover {
+    color: var(--color-primary); /* Зміна кольору при наведенні */
+}
+
+/* Адаптивність для екранів менше 830px */
 @media screen and (max-width: 830px) {
     .container {
         flex-direction: column;
-        gap: 23px;
+        padding: 40px 5%;
+        gap: 30px;
     }
 
-    .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .text h2 {
+        font-size: 48px; /* Зменшення розміру для мобільних */
+        text-align: center;
+    }
 
+    .text p {
+        font-size: 24px; /* Зменшення розміру для мобільних */
+        text-align: center;
     }
 
     .links {
         align-items: center;
+        gap: 18px;
+    }
+
+    .link {
+        gap: 15px;
+    }
+
+    .link a {
+        font-size: 20px; /* Зменшення шрифту для мобільних */
+    }
+
+    .link img {
+        width: 30px;
+        height: 30px;
     }
 }
