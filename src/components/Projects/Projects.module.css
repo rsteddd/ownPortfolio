@@ -1,27 +1,42 @@
-@import "../../vars.css";
 
-
-.container{
+/* Projects.module.css */
+.container {
     color: var(--color-text);
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
+    margin: 5% auto; /* Заміна margin-left і margin-right на auto для центрованого розташування */
+    padding: 2%; /* Додаємо padding для додаткового простору */
+    max-width: 1200px; /* Обмеження ширини для великого екрану */
 }
-.title{
-    font-size: 35px;
+
+.title {
+    font-size: 2rem; /* Зміна розміру шрифту з абсолютного значення на відносне для кращої адаптивності */
     font-weight: 700;
     letter-spacing: 1.75px;
     text-transform: uppercase;
     font-family: 'Comic Sans MS', sans-serif;
-    margin-left: 5%;
+    text-align: center; /* Центруємо заголовок */
+    margin-bottom: 1.5rem; /* Зміна на margin-bottom для кращого відступу знизу */
 }
-.projects{
-    margin-top: 35px;
+
+.projects {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
+    gap: 1.5rem;
+    justify-content: center; /* Центруємо проекти в контейнері */
+    padding: 1rem; /* Додаємо padding для простору навколо проектів */
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+    .container {
+        margin: 5%; /* Зменшуємо маржі для менших екранів */
+    }
+
+    .title {
+        font-size: 1.75rem; /* Зменшення розміру шрифту на менших екранах */
+    }
+
+    .projects {
+        flex-direction: column; /* Вертикальне розташування на маленьких екранах */
+        gap: 1rem; /* Зменшуємо розрив між проектами */
+    }
 }
